@@ -38,19 +38,19 @@ L’application exploite le fichier consolidé publié sur **Humanitarian Data E
 
 Placez vos images dans le dossier `docs/captures/`, puis ajoutez les lignes suivantes dans cette section du README. Vous pouvez aussi remplacer `apercu.png` pour changer la capture déjà affichée.
 
-```markdown
-### 🖥️ Vue d’ensemble
-![Vue d’ensemble du tableau de bord](docs/captures/vue-ensemble.png)
+
+
 
 ### 📈 Évolution des cas et décès
-![Graphique des cas et décès](docs/captures/evolution.png)
+
+<img width="1920" height="1020" alt="Capture d&#39;écran 2026-10-31 135756" src="https://github.com/user-attachments/assets/3c2e493f-f3bb-4ecd-9dec-7189dcd2e831" />
+
 
 ### 📍 Données par zone de santé
-![Tableau des zones de santé](docs/captures/zones-sante.png)
 
-### 📱 Version mobile
-<img src="docs/captures/mobile.png" alt="Ebola RDC sur téléphone" width="360">
-```
+<img width="1920" height="1020" alt="Capture d&#39;écran 2026-10-31 135814" src="https://github.com/user-attachments/assets/488c5309-6de2-4f91-ae7c-b44216089f33" />
+
+
 
 Utilisez des noms de fichiers sans espaces. Les majuscules et minuscules du lien doivent correspondre exactement au nom de l’image.
 
