@@ -1,28 +1,8 @@
-<div align="center">
+
 
 # 🧬 Ebola RDC
 
 ### Observatoire des cas et décès
-
-**Comprendre les données. Suivre l’évolution.**
-
-Un tableau de bord web en français pour explorer les données publiques d’Ebola en République démocratique du Congo.
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-22%2B-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-
-[![Source HDX](https://img.shields.io/badge/Données-HDX-007CE0?style=flat-square)](https://data.humdata.org/dataset/republique-democratique-du-congo-cas-et-deces-d-ebola)
-![Langue française](https://img.shields.io/badge/Langue-Français-8B5CF6?style=flat-square)
-![Interface adaptative](https://img.shields.io/badge/Interface-Adaptative-0F766E?style=flat-square)
-![Export CSV](https://img.shields.io/badge/Export-CSV-D97706?style=flat-square)
-
-[Présentation](#-présentation) · [Captures](#-captures-décran) · [Démarrage](#-démarrage-rapide) · [Données](#-source-et-actualisation) · [Méthode](#-comprendre-les-indicateurs)
-
-</div>
-
----
 
 ## 🌍 Présentation
 
@@ -50,9 +30,8 @@ L’application exploite le fichier consolidé publié sur **Humanitarian Data E
 
 ### Évolution des cas et classement des zones
 
-<p align="center">
-  <img src="docs/captures/apercu.png" alt="Capture de l’application Ebola RDC : courbes des cas et décès et classement des zones de santé" width="460">
-</p>
+<img width="470" height="857" alt="apercu" src="https://github.com/user-attachments/assets/686c3722-8a73-4793-a883-be0ecd036607" />
+
 
 <details>
 <summary><strong>🖼️ Ajouter vos propres captures</strong></summary>
