@@ -28,10 +28,6 @@ L’application exploite le fichier consolidé publié sur **Humanitarian Data E
 
 ## 📸 Captures d’écran
 
-### Évolution des cas et classement des zones
-
-<img width="470" height="857" alt="apercu" src="https://github.com/user-attachments/assets/686c3722-8a73-4793-a883-be0ecd036607" />
-
 ### 📈 Évolution des cas et décès
 
 <img width="1920" height="1020" alt="Capture d&#39;écran 2026-10-31 135756" src="https://github.com/user-attachments/assets/3c2e493f-f3bb-4ecd-9dec-7189dcd2e831" />
