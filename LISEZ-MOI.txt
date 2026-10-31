@@ -1,0 +1,49 @@
+EBOLA RDC — OBSERVATOIRE DES CAS ET DÉCÈS
+
+Ouvrir l'application
+Double-cliquez sur Demarrer.cmd, puis ouvrez http://127.0.0.1:4173.
+Node.js 22 ou une version plus récente est nécessaire. Aucune installation de dépendances.
+Conservez la fenêtre ouverte pendant l'utilisation. Ctrl+C arrête le serveur.
+
+Consultation sans serveur
+Ouvrez index.html dans un navigateur. Une copie réelle des données HDX est incluse.
+Les filtres, graphiques, tableau et exports fonctionnent hors ligne. Les polices
+distantes sont remplacées automatiquement par une police système en leur absence.
+L'actualisation nécessite le serveur local.
+
+Données
+Source : https://data.humdata.org/dataset/republique-democratique-du-congo-cas-et-deces-d-ebola
+API CKAN : https://data.humdata.org/api/3/action/package_show?id=republique-democratique-du-congo-cas-et-deces-d-ebola
+La copie initiale couvre le 14 mai au 29 octobre 2026 et a été récupérée le 31 octobre 2026.
+Le fichier source complet est conservé dans data/source.csv.
+Les métadonnées et observations utilisées sont dans data/snapshot.json.
+
+Méthode
+- Niveau 0 : cumuls nationaux publiés. Niveau 3 : zones de santé.
+- Les niveaux ne sont jamais additionnés. La somme des zones peut différer du national.
+- Les lignes sans zone identifiée sont conservées dans la source et exclues du décompte des zones.
+- Seuls les cas et décès cumulés sont présentés. Les contacts restent dans le fichier source.
+- La classification est toujours conservée : cas confirmés et suspects séparés.
+- Les indicateurs et le classement utilisent le dernier relevé au plus tard à la date de fin.
+- La date de début filtre les observations du graphique et de l'export, pas les cumuls.
+- Le tableau affiche séparément la date des cas et celle des décès.
+- La létalité n'est calculée que sur une même date, classification et zone, si les cas sont > 0.
+- Les valeurs manquantes ne sont pas transformées en zéro.
+- Les signalements qualité de la source sont conservés et exportés.
+- La source ne fournit pas de coordonnées : le classement remplace la carte.
+
+Actualisation
+Le serveur vérifie HDX lorsque la copie a plus de 24 heures, lors d'une visite,
+et toutes les 24 heures tant que le serveur fonctionne. Le bouton Actualiser
+demande une nouvelle récupération. Un intervalle minimal de 60 secondes entre
+tentatives protège la source. En cas d'échec, la dernière copie valide est conservée.
+La copie initiale est utilisable sans réseau ; aucune donnée simulée n'est incluse.
+
+Déploiement
+L'hébergement Sites n'est pas activé dans l'espace de travail d'origine.
+Aucun déploiement public n'a été effectué. Le serveur se limite par défaut à
+l'ordinateur local (127.0.0.1). Adapter l'hébergement pour une diffusion publique.
+
+Vérification
+Depuis ce dossier : node --test tests.mjs
+Serveur : node server.mjs

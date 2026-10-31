@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#173e43"><title>Ebola RDC — Observatoire des cas et décès</title><meta name="description" content="Explorer les cas et décès d’Ebola en République démocratique du Congo. Données publiques HDX, graphiques et tableaux téléchargeables."><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23173e43'/%3E%3Cpath d='M9 20h7l3-8 5 16 3-8h5' fill='none' stroke='%23b7dfb7' stroke-width='3'/%3E%3C/svg%3E"><link rel="stylesheet" href="style.css"></head>
+<body>
+<a href="#main" class="skip">Aller au contenu</a>
+<aside class="sidebar">
+  <a class="brand" href="#overview"><span class="brand-icon">✳</span><span>Ebola<span class="brand-light">Observatoire RDC</span></span></a>
+  <div class="side-label">EXPLORER LES DONNÉES</div>
+  <nav aria-label="Navigation principale">
+    <a class="nav-link active" href="#overview"><span aria-hidden="true">▦</span>Vue d’ensemble</a>
+    <a class="nav-link" href="#evolution"><span aria-hidden="true">↗</span>Évolution temporelle</a>
+    <a class="nav-link" href="#zones"><span aria-hidden="true">◎</span>Zones de santé</a>
+    <a class="nav-link" href="#methodology"><span aria-hidden="true">≡</span>Sources & méthode</a>
+  </nav>
+  <div class="side-bottom"><div class="source-chip"><span class="live-dot"></span> DONNÉES PUBLIQUES</div><p>Une lecture claire des données sanitaires en RDC.</p><a href="https://data.humdata.org/dataset/republique-democratique-du-congo-cas-et-deces-d-ebola" target="_blank" rel="noopener">Consulter la source HDX ↗</a></div>
+</aside>
+<div class="workspace">
+<header class="topbar"><span>Surveillance épidémiologique <span class="top-separator">/</span> <strong>République démocratique du Congo</strong></span><span class="country"><span aria-hidden="true">🇨🇩</span> RDC</span></header>
+<main id="main">
+<section id="overview" class="intro"><div><div class="eyebrow"><span class="live-dot"></span> OBSERVATOIRE EBOLA · RDC</div><h1>Comprendre les données.<br><span>Suivre l’évolution.</span></h1><p>Les cas et décès d’Ebola, dans une vue claire et accessible.</p></div><div class="intro-actions"><button id="export" class="button primary"><span aria-hidden="true">↓</span> Exporter les données</button><span class="export-note">CSV · selon les filtres sélectionnés</span></div></section>
+<div class="status-bar"><span><span class="status-dot"></span><strong id="coverage">Lecture des données…</strong><span id="synced"></span></span><button id="refresh" class="text-button">↻ Actualiser</button></div>
+<div id="notice" class="notice" role="status" hidden></div>
+<section class="filter-bar" aria-label="Filtres du tableau de bord">
+  <label>Classification<select id="classification"><option value="confirmed">Cas confirmés</option><option value="suspected">Cas suspects</option></select></label>
+  <label class="zone-filter">Périmètre géographique<select id="zone"><option value="COD">Ensemble de la RDC · national</option></select></label>
+  <label>Du<input id="start" type="date"></label><span class="date-dash" aria-hidden="true">—</span><label>Au<input id="end" type="date"></label>
+  <button id="reset" class="reset" title="Réinitialiser les filtres" aria-label="Réinitialiser les filtres">↺</button>
+</section>
+<div id="filter-error" class="notice" role="alert" hidden></div>
+<div class="section-heading"><h2>La situation en chiffres</h2><span id="scope-label">Totaux nationaux publiés</span></div>
+<section class="metrics" aria-label="Indicateurs cumulés">
+  <article class="metric blue"><div class="metric-top">Cas <span class="metric-class">confirmés</span><span class="metric-icon" aria-hidden="true">↗</span></div><strong id="cases-value">—</strong><div id="cases-date" class="metric-sub">Donnée indisponible</div><div class="metric-bottom">Cumul publié à la date indiquée</div></article>
+  <article class="metric burgundy"><div class="metric-top">Décès <span class="metric-class">confirmés</span><span class="metric-icon" aria-hidden="true">−</span></div><strong id="deaths-value">—</strong><div id="deaths-date" class="metric-sub">Donnée indisponible</div><div class="metric-bottom">Parmi la classification sélectionnée</div></article>
+  <article class="metric"><div class="metric-top">Létalité brute<span class="metric-icon" aria-hidden="true">%</span></div><strong id="fatality-value">—</strong><div id="fatality-note" class="metric-sub">Décès / cas × 100</div><div class="metric-bottom">Rapport descriptif des cumuls publiés</div></article>
+  <article class="metric"><div class="metric-top">Zones avec des cas<span class="metric-icon" aria-hidden="true">◎</span></div><strong id="zones-value">—</strong><div class="metric-sub">Zones de santé documentées</div><div class="metric-bottom">Au moins un cas cumulé · sélection</div></article>
+</section>
+<p class="reading-note" id="reading-note">Les indicateurs présentent les derniers cumuls disponibles au plus tard à la date de fin.</p>
+<div class="charts-grid">
+  <section id="evolution" class="panel chart-panel"><div class="panel-header"><div><div class="eyebrow small">DYNAMIQUE DE L’ÉPIDÉMIE</div><h2>Évolution des cas et décès</h2></div><span class="pill">Cumuls publiés</span></div><div class="chart-legend"><span><i class="legend-dot cases"></i>Cas</span><span><i class="legend-dot deaths"></i>Décès</span><span id="chart-period"></span></div><div id="chart" class="chart" aria-live="polite"></div><div id="chart-tooltip" class="chart-tooltip" hidden></div><div class="panel-foot">Chaque point correspond à une observation publiée. Les cumuls ne sont pas additionnés.</div></section>
+  <section class="panel ranking-panel"><div class="panel-header"><div><div class="eyebrow small">RÉPARTITION LOCALE</div><h2>Les zones les plus touchées</h2></div><span aria-hidden="true" class="soft-icon">◎</span></div><p class="panel-desc">Les cinq premiers cumuls de cas disponibles.</p><div id="ranking"></div><div class="panel-foot">Dernier relevé par zone, jusqu’à la date de fin.<br>Ces valeurs ne reconstituent pas le total national.</div></section>
+</div>
+<section id="zones" class="panel table-panel"><div class="panel-header"><div><div class="eyebrow small">EXPLORER LE DÉTAIL</div><h2>Les données par zone de santé <span id="zone-count" class="count-badge"></span></h2></div><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Rechercher une zone…" aria-label="Rechercher une zone de santé"></label></div><p class="table-desc">Derniers cumuls disponibles au plus tard à la date de fin. La recherche s’applique uniquement au tableau.</p><div class="table-scroll"><table><thead><tr><th scope="col"><button data-sort="name">Zone de santé <span aria-hidden="true">↕</span></button></th><th scope="col"><button data-sort="cases">Cas cumulés <span aria-hidden="true">↕</span></button></th><th scope="col">Date des cas</th><th scope="col"><button data-sort="deaths">Décès cumulés <span aria-hidden="true">↕</span></button></th><th scope="col">Date des décès</th><th scope="col">Qualité</th></tr></thead><tbody id="table-body"></tbody></table></div><div class="table-footer"><span id="table-info"></span><div><button id="prev" class="pagination" aria-label="Page précédente">←</button><span id="page-number"></span><button id="next" class="pagination" aria-label="Page suivante">→</button></div></div></section>
+<section id="methodology" class="methodology"><div><div class="eyebrow small">TRANSPARENCE & MÉTHODE</div><h2>Des chiffres avec leur contexte.</h2><p>Une donnée compréhensible commence par une source identifiable.</p><a href="https://data.humdata.org/dataset/republique-democratique-du-congo-cas-et-deces-d-ebola" target="_blank" rel="noopener" class="source-link">Ouvrir le jeu de données HDX ↗</a></div><div class="method-grid"><article><h3>01 / Une source traçable</h3><p id="source-details">Ressource CSV consolidée sur HDX. Données INRB-UMIE, issues des rapports de situation INSP.</p><p id="source-updated"></p><a href="data/source.csv" download="ebola-rdc-source.csv">Télécharger le fichier source ↧</a></article><article><h3>02 / Des niveaux distincts</h3><p>Les totaux nationaux (niveau 0) et les zones de santé (niveau 3) sont analysés séparément. Aucun total national n’est reconstruit à partir des zones. Les lignes sans zone identifiée sont exclues du classement et du décompte des zones, et conservées dans le fichier source.</p></article><article><h3>03 / Des dates explicites</h3><p>Les indicateurs utilisent le dernier relevé disponible avant ou à la date de fin. La date de début filtre le graphique et l’export. « — » signifie qu’aucune valeur n’est disponible, jamais zéro.</p></article><article><h3>04 / Une lecture mesurée</h3><p>La létalité brute est calculée uniquement lorsque cas et décès partagent la même date et la même classification. Les cas suspects restent séparés des cas confirmés. Les signalements manuels de la source sont conservés.</p></article></div></section>
+<footer><span class="footer-brand">✳ Ebola RDC <span>Observatoire des cas et décès</span></span><span>Données publiques · HDX / INRB-UMIE</span></footer>
+</main></div>
+<script src="data.js"></script><script src="model.js"></script><script src="app.js"></script>
+</body></html>
