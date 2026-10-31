@@ -32,15 +32,6 @@ L’application exploite le fichier consolidé publié sur **Humanitarian Data E
 
 <img width="470" height="857" alt="apercu" src="https://github.com/user-attachments/assets/686c3722-8a73-4793-a883-be0ecd036607" />
 
-
-<details>
-<summary><strong>🖼️ Ajouter vos propres captures</strong></summary>
-
-Placez vos images dans le dossier `docs/captures/`, puis ajoutez les lignes suivantes dans cette section du README. Vous pouvez aussi remplacer `apercu.png` pour changer la capture déjà affichée.
-
-
-
-
 ### 📈 Évolution des cas et décès
 
 <img width="1920" height="1020" alt="Capture d&#39;écran 2026-10-31 135756" src="https://github.com/user-attachments/assets/3c2e493f-f3bb-4ecd-9dec-7189dcd2e831" />
@@ -49,12 +40,6 @@ Placez vos images dans le dossier `docs/captures/`, puis ajoutez les lignes suiv
 ### 📍 Données par zone de santé
 
 <img width="1920" height="1020" alt="Capture d&#39;écran 2026-10-31 135814" src="https://github.com/user-attachments/assets/488c5309-6de2-4f91-ae7c-b44216089f33" />
-
-
-
-Utilisez des noms de fichiers sans espaces. Les majuscules et minuscules du lien doivent correspondre exactement au nom de l’image.
-
-</details>
 
 ## 🚀 Démarrage rapide
 
